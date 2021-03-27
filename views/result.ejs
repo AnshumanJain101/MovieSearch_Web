@@ -1,0 +1,38 @@
+<%- include("./partials/header")%>
+<div class="container">
+
+    <%if(moviesDump.Response==='False'){%>
+        <h1> movie Not Found</h1>
+        <%}else{%>
+            <h1> Results Go Here</h1>
+            <!-- <div class="row"> -->
+                <% moviesDump["Search"].forEach(function(movie) { %>
+                <div
+                  class="card px-2 py-2"
+                  style="
+                    width: 20rem;
+                    margin-bottom: 10px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                  "
+                >
+                  <img class="card-img-top" src="<%=movie.Poster%>" alt="Image Not Found" />
+                  <div class="card-body">
+                    <h5 class="card-title"><%=movie["Title"]%></h5>
+                    <p class="card-text">Released on <%=movie["Year"]%></p>
+                    <a href="/result/<%=movie["imdbID"]%>" class="btn btn-primary">Know More</a>
+                  </div>
+                </div>
+                <% }) %>
+              <!-- </div> -->
+        <%}%>
+    
+</div>
+<!-- 
+<div class="jumbotron">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </div> -->

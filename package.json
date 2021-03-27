@@ -1,0 +1,23 @@
+{
+  "name": "app.js",
+  "version": "1.0.0",
+  "description": "Akshay",
+  "main": "app.js",
+  "scripts": {
+    "test": "nothuing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nothing"
+  },
+  "keywords": [
+    "nothing"
+  ],
+  "author": "Anshuman",
+  "license": "UNLICENCED",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
